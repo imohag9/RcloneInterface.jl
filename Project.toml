@@ -1,0 +1,12 @@
+name = "RcloneInterface"
+uuid = "932f4081-3d7e-4a99-9bcb-8a566d3812cb"
+authors = ["imohag9 <souidi.hamza90@gmail.com> and contributors"]
+version = "0.1.0"
+
+[deps]
+Rclone_jll = "d3707c4a-c138-5086-90bb-c65de4e50315"
+
+[compat]
+Rclone_jll = "1.70.3"
+julia = "1.11"
+
