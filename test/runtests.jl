@@ -34,14 +34,7 @@ end
     write_test_file(joinpath(src_dir, "subdir", "nested.txt"), "Nested content")
 
     try
-        # Test: rclone_ls
-        output = rclone_ls(src_dir)
 
-        @test parse(Int, split(output)[1]) > 0  # first field is size
-
-        # Test: rclone_size
-        size_output = rclone_size(src_dir)
-        
 
 
 

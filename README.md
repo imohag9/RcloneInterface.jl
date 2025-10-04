@@ -4,15 +4,15 @@
 [![Build Status](https://github.com/imohag9/RcloneInterface.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/imohag9/RcloneInterface.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![Aqua](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
 
-> **A safe, high-level Julia interface to [`rclone`](https://rclone.org)** — the Swiss Army knife for cloud storage and file synchronization.
+> **A safe, high-level Julia interface to [`Rclone`](https://rclone.org)** — the Swiss Army knife for cloud storage and file synchronization.
 
-`RcloneInterface.jl` wraps the powerful `rclone` CLI tool in idiomatic Julia functions with **keyword arguments**, **automatic binary management** (via `Rclone_jll`), and **built-in safety defaults** (like `dry_run=true`). No need to install `rclone` separately—everything runs out of the box!
+`RcloneInterface.jl` wraps the powerful `Rclone` CLI tool in idiomatic Julia functions with **keyword arguments**, **automatic binary management** (via `Rclone_jll`), and **built-in safety defaults** (like `dry_run=true`). No need to install `Rclone` separately—everything runs out of the box!
 
 
 
 ## ✨ Features
 
-- **Full coverage** of core `rclone` commands: `copy`, `sync`, `move`, `ls`, `delete`, `check`, `dedupe`, `size`, `tree`, `mount`, and more.
+- **Full coverage** of core `Rclone` commands: `copy`, `sync`, `move`, `ls`, `delete`, `check`, `dedupe`, `size`, `tree`, `mount`, and more.
 - **Type-safe keyword arguments** that map directly to `rclone` flags (e.g., `max_age="7d"`, `checksum=true`).
 - **No external dependencies**: Uses the official `rclone` binary via `Rclone_jll`.
 - **Safety-first defaults**: Most destructive operations support `dry_run=true` by default.
@@ -29,7 +29,7 @@ using Pkg
 Pkg.add("RcloneInterface")
 ```
 
- ⚠️ **Note**: You must have `rclone` [configured](https://rclone.org/docs/#config-file) (e.g., via `rclone config`) **outside Julia** before using remote backends. Local paths work immediately.
+ ⚠️ **Note**: You must have `Rclone` [configured](https://rclone.org/docs/#config-file) (e.g., via `rclone config`) **outside Julia** before using remote backends. Local paths work immediately.
 
 
 
@@ -97,9 +97,9 @@ println(rclone_size("onedrive:projects"))
 > 💡 All functions accept common filtering options: `exclude`, `include`, `max_age`, `min_size`, etc.
 
 
-See the [rclone documentation](https://rclone.org/commands/) for a complete list of commands and options.
+See the [Rclone documentation](https://rclone.org/commands/) for a complete list of commands and options.
 
-**Note**: This package is **not affiliated** with the official `rclone` project. It is a community-driven Julia wrapper.
+**Note**: This package is **not affiliated** with the official `Rclone` project. It is a community-driven Julia wrapper.
 
 
 ## 🧪 Testing & Reliability
